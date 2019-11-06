@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="M2Dev\SlickSlider\Block\Widget\CustomWidget" id="m2dev_slickslider_customwidget">
+        <label translate="true">Custom Widget Product List</label>
+        <description translate="true">List of Products for Slick Slider</description>
+        <parameters>
+            <parameter name="widgettext" sort_order="10" visible="true" xsi:type="text">
+                <label>Custom Widget Text Label</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
+
