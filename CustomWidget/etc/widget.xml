@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="M2Dev\CustomWidget\Block\Widget\SampleWidget" id="m2dev_customwidget_samplewidget">
+        <label>M2Dev Sample Widget</label>
+        <description>M2Dev Sample widget Description</description>
+        <parameters>
+            <parameter name="widgettitle" sort_order="10" visible="true" xsi:type="text">
+                <label>Title</label>
+            </parameter>
+            <parameter name="widgetcontent" sort_order="20" visible="true" xsi:type="textarea">
+                <label>Content</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
+
