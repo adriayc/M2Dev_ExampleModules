@@ -1,0 +1,37 @@
+<h2>Hello World AAC!</h2>
+
+<div class="container-slider">
+    <ul class="product-slider2" id="product_slider2">
+        <li>SLIDER 1</li>
+        <li>SLIDER 2</li>
+        <li>SLIDER 3</li>
+        <li>SLIDER 4</li>
+        <li>SLIDER 5</li>
+        <li>SLIDER 6</li>
+        <li>SLIDER 7</li>
+        <li>SLIDER 8</li>
+        <li>SLIDER 9</li>
+    </ul>
+</div>
+
+
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function($) {
+        'use strict';
+
+        $(function() {
+            console.log('AAC SLICK!');
+
+            $(".product-slider2").slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                // infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+    });
+</script>

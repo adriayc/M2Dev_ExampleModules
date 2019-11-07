@@ -1,27 +1,25 @@
 <?php
 
-namespace M2Dev\SlickSlider\Block\Widget;
+namespace M2Dev\SliderProductsList\Block\Product;
 
-class ProductList extends \Magento\Framework\View\Element\Template implements \Magento\Widget\Block\BlockInterface
+class ProductsList extends \Magento\CatalogWidget\Block\Product\ProductsList
 {
-
-//    protected $_template = "widget/customwidget.phtml";
 
     const DEFAULT_SORT_BY = 'id';
     const DEFAULT_SORT_ORDER = 'asc';
 
     public function createCollection()
     {
-        $collection = $this->productCollectionFactor->create();
+        $collection = $this->productCollectionFactory->create();
         $collection->setVisibility($this->catalogProductVisibility->getVisibleInCatalogIds());
 
-        $collection = $this->__addProductAttributesAndPrices($collection)
+        $collection = $this->_addProductAttributesAndPrices($collection)
             ->addStoreFilter()
-            ->setPage($this->getPageSize())
-            ->stCurPage($this->getRequest()->getParam($this->getData('page_var_name'), 1))
+            ->setPageSize($this->getPageSize())
+            ->setCurPage($this->getRequest()->getParam($this->getData('page_var_name'), 1))
             ->setOrder($this->getSortBy(), $this->getSortOrder());
 
-        $conditions = $this->getCondition();
+        $conditions = $this->getConditions();
         $conditions->collectValidatedAttributes($collection);
         $this->sqlBuilder->attachConditionToCollection($collection, $conditions);
 

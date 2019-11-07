@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<!--    <head>-->
+<!--        <css src="M2Dev_SlickSlider::css/slick/slick.css" />-->
+<!--        <css src="M2Dev_SlickSlider::css/slick/slick-theme.css" />-->
+<!--    </head>-->
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" template="M2Dev_SliderProductsList::productslider.phtml" />
+<!--            <block class="M2Dev\SlickSlider\Block\ProductsList" template="M2Dev_SlickSlider::slickslider.phtml" />-->
+        </referenceContainer>
+    </body>
+</page>

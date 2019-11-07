@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="sliderproductlist_products_list" class="M2Dev\SliderProductsList\Block\Product\ProductsList">
+        <label translate="true">M2Dev Catalog Products Lists</label>
+        <description translate="true">M2Dev - Extended Catalog Products List</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" sort_order="10" visible="true" required="false">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="products_sort_by" xsi:type="select" sort_order="20" visible="true"
+                       source_model="M2Dev\SliderProductsList\Model\Config\Source\SortBy">
+                <label translate="true">Sort Products By</label>
+            </parameter>
+            <parameter name="products_sort_order" xsi:type="select" sort_order="30" visible="true"
+                       source_model="M2Dev\SliderProductsList\Model\Config\Source\SortOrder">
+                <label translate="true">Sort Products Order</label>
+            </parameter>
+            <parameter name="show_pager" xsi:type="select" sort_order="40" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Display Page Control</label>
+            </parameter>
+            <parameter name="products_per_page" xsi:type="text" sort_order="50" visible="true" required="true">
+                <label translate="true">Number of Products per Page</label>
+                <depends>
+                    <parameter name="show_pager" value="1" />
+                </depends>
+                <value>5</value>
+            </parameter>
+            <parameter name="products_count" xsi:type="text" sort_order="60" visible="true" required="true">
+                <label translate="true">Number of Products to Display</label>
+                <value>10</value>
+            </parameter>
+            <parameter name="template" xsi:type="select" sort_order="70" visible="true" required="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="Magento_CatalogWidget::product/widget/content/grid.phtml" selected="true">
+                        <label translate="true">Products Grid Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="cache_lifetime" xsi:type="text" sort_order="80" visible="true">
+                <label translate="true">Cache Lifetime (Seconds)</label>
+                <description translate="true">86400 by default, if not set. To refresh instantly, clear the Blocks HTML Output cache.</description>
+            </parameter>
+            <parameter name="condition" xsi:type="conditions" sort_order="90" visible="true" required="true"
+                       class="Magento\CatalogWidget\Block\Product\Widget\Conditions">
+                <label translate="true">Conditions</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
+
