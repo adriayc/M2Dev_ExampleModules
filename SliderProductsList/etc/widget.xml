@@ -50,5 +50,30 @@
             </parameter>
         </parameters>
     </widget>
+
+    <widget id="sliderproductlist_cms_static_list" class="M2Dev\SliderProductsList\Block\Cms\CmsBlockList">
+        <label translate="true">M2Dev CMS Block List</label>
+        <description translate="true">M2Dev - CMS Block Static List</description>
+        <parameters>
+            <parameter name="block_id" xsi:type="block" visible="true" required="true" sort_order="20">
+                <label translate="true">Block</label>
+                <block class="Magento\Cms\Block\Adminhtml\Block\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Block...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="template" xsi:type="select" visible="true" required="true" sort_order="10">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="widget/static_block/default.phtml" selected="true">
+                        <label translate="true">CMS Static Block Default Template</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
 </widgets>
 
