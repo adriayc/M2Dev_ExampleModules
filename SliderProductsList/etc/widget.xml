@@ -51,7 +51,7 @@
         </parameters>
     </widget>
 
-    <widget id="sliderproductlist_cms_static_list" class="M2Dev\SliderProductsList\Block\Cms\CmsBlockList">
+    <widget id="sliderproductlist_cms_static_list" class="Magento\Cms\Block\Widget\Block">
         <label translate="true">M2Dev CMS Block List</label>
         <description translate="true">M2Dev - CMS Block Static List</description>
         <parameters>
