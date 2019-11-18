@@ -73,6 +73,20 @@
                     </option>
                 </options>
             </parameter>
+
+
+            <parameter name="photo" xsi:type="block" visible="true" required="false" sort_order="30">
+                <label translate="true">Photo</label>
+                <description translate="true">Constant Photo</description>
+                <block class="M2Dev\SliderProductsList\Block\Adminhtml\widget\ImageChoose">
+                    <data>
+                        <item name="buttom" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+
         </parameters>
     </widget>
 </widgets>
